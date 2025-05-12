@@ -1,6 +1,6 @@
 # MicroFrontend - TodoApp 
 
-Developed a TodoApp in React utilizing modern scalable microfrontend architecture.
+Developed a TodoApp in React 18 utilizing modern scalable microfrontend architecture.
 
 ## Features:
 
@@ -12,7 +12,7 @@ Developed a TodoApp in React utilizing modern scalable microfrontend architectur
 * Host-App is the central point (like Eureka Discovery Service in Spring Netflix Eureka for Spring Microservices) where the components from remote apps: Todoform-App, Todolist-App are imported and rendered.
 * Implemented Hot reload functionality using react-refresh plugin for the DEV environment.
 * Imported and exported components from one project to another (remotely) using webpack module federation plugin.
-* Handled routes and navigation in micro-frontend architecture using remoteEntry.js for each of the components.
+* Handled routes and navigation in micro-frontend architecture using react-router-dom v6, remoteEntry.js for each of the components.
 * Further, this todoapp has Pagination, Sorting, Searching, CRUD, Toast Notifications, Scalable functionalities, utilizes Browser localStorage.
 
 ## Architecture Diagram:
