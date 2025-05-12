@@ -22,7 +22,7 @@ Developed a TodoApp in React 18 utilizing modern scalable microfrontend architec
 #### Front-End:
 <img alt="React" src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"/> <img alt="Webpack" src="https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black"/>
 
-## Deployed Version:
+## PROD Deployment Link:
 
 https://micro-frontend-todo-app-host.vercel.app/
 
