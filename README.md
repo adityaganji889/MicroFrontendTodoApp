@@ -9,7 +9,7 @@ Developed a TodoApp in React utilizing modern scalable microfrontend architectur
 * Implemented Hot reload functionality using react-refresh plugin for the development server.
 * Imported and exported components from one project to another (remotely) using webpack module federation plugin.
 * Handled routes and navigation in micro-frontend architecture using remoteEntry.js for each of the components.
-* Further, this todoapp has Pagination, Sorting, Searching, CRUD, Scalable functionalities, utlizing Browser localStorage.
+* Further, this todoapp has Pagination, Sorting, Searching, CRUD, Toast Notifications, Scalable functionalities, utlizing Browser localStorage.
 
 ## Architecture Diagram:
 ![image](https://github.com/user-attachments/assets/1cb3bb72-b28a-420c-9c55-ec1bd00037b6)
