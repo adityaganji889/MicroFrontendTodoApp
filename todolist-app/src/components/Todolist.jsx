@@ -9,6 +9,7 @@ function Todolist() {
   );
 
   const [orderBy, setOrderBy] = React.useState("latest");
+  const [sortByPriority, setSortByPriority] = React.useState("all");
   const [sortBy, setSortBy] = React.useState("all");
   const [searchTerm, setSearchTerm] = React.useState("");
 
@@ -29,10 +30,11 @@ function Todolist() {
   const filteredAndSortedTodos = todoItems
     .filter((todo) => {
       const matchesStatus = sortBy === "all" || todo.status === sortBy;
+      const matchesPriority = sortByPriority === "all" || todo.priority === sortByPriority;
       const matchesSearch =
         todo.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         todo.description.toLowerCase().includes(searchTerm.toLowerCase());
-      return matchesStatus && matchesSearch;
+      return matchesStatus && matchesPriority && matchesSearch;
     })
     .sort((a, b) => {
       const timeA = Number(a.lastUpdatedAt);
@@ -92,7 +94,21 @@ function Todolist() {
             <option value="latest">Latest</option>
             <option value="oldest">Oldest</option>
           </select>
-          <span className="flex items-center">Sort By: </span>
+          <span className="flex items-center">Priority: </span>
+          <select
+            value={sortByPriority}
+            onChange={(e) => {
+              setSortByPriority(e.target.value);
+              toast.success(`Sort Tasks by priority: ${e.target.value}`);
+            }}
+            style={{ padding: "1rem" }}
+          >
+            <option value="all">All</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+          <span className="flex items-center">Status: </span>
           <select
             value={sortBy}
             onChange={(e) => {
