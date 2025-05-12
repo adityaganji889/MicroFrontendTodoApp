@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 function App() {
   return (
-    <div>TodoList App</div>
-  )
+    <div>Todolist App</div>
+  );
 }
 
-export default App
+export default App;

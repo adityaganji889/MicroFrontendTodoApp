@@ -23,7 +23,9 @@ function Todolist() {
     setTodoItems(updatedTodos);
     toast.success("Selected Task deleted successfully");
     localStorage.setItem("todos", JSON.stringify(updatedTodos));
-    toast.success("All Tasks fetched successfully");
+    setTimeout(()=>{
+      toast.success("All Tasks fetched successfully");
+    },1000);
   };
 
   //
@@ -87,7 +89,7 @@ function Todolist() {
             value={orderBy}
             onChange={(e) => {
               setOrderBy(e.target.value);
-              toast.success(`Order Tasks by: ${e.target.value}`);
+              toast.success(`Sort Tasks by: ${e.target.value}`);
             }}
             style={{ padding: "1rem" }}
           >
@@ -99,7 +101,7 @@ function Todolist() {
             value={sortByPriority}
             onChange={(e) => {
               setSortByPriority(e.target.value);
-              toast.success(`Sort Tasks by priority: ${e.target.value}`);
+              toast.success(`Filter Tasks with priority: ${e.target.value}`);
             }}
             style={{ padding: "1rem" }}
           >
@@ -113,7 +115,7 @@ function Todolist() {
             value={sortBy}
             onChange={(e) => {
               setSortBy(e.target.value);
-              toast.success(`Sort Tasks by status: ${e.target.value}`);
+              toast.success(`Filter Tasks with status: ${e.target.value}`);
             }}
             style={{ padding: "1rem" }}
           >
