@@ -84,7 +84,7 @@ function Todolist() {
             <option value={10}>10</option>
             <option value={15}>15</option>
           </select>
-          <span className="flex items-center">Order By: </span>
+          <span className="flex items-center">Sort By: </span>
           <select
             value={orderBy}
             onChange={(e) => {
