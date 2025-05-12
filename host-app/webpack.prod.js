@@ -4,8 +4,8 @@ const ModuleFederationPlugin =
   require("webpack").container.ModuleFederationPlugin;
 const dependencies = require("./package.json").dependencies;
 
-const todoformAppUrl = "http://localhost:3001";
-const todolistAppUrl = "http://localhost:3002";
+const todoformAppUrl = "https://micro-frontend-todo-app.vercel.app";
+const todolistAppUrl = "https://micro-frontend-todo-app-list.vercel.app";
 
 module.exports = {
   entry: "./src/bootstrap.js", //default location looks for index.js
